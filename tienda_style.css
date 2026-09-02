@@ -1,7 +1,7 @@
 /* --- 6. GRILLA, TARJETAS, CARRITO (Solo en Tienda) --- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 0fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
   justify-content: center;
   align-content: start;
   gap: 22px;
@@ -25,14 +25,14 @@
   flex-direction: column;
   box-shadow: var(--shadow);
   opacity: 1;
-  transform: translateY(40px);
+  transform: translateY(20px);
   animation: cardReveal 0.7s forwards;
 }
 
 .card:hover {
-  transform: translateY(30px);
-  border-color: rgba(83, 236, 56, 0.25);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 40px rgba(124, 92, 255, 0.15);
+  transform: translateY(8px);
+  border-color: rgba(119, 255, 92, 0.4);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 40px rgba(119, 255, 92, 0.15);
 }
 
 .card-image-wrapper {
@@ -41,7 +41,8 @@
 }
 
 .card img {
-  width: 100%;
+  width: auto;
+  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.8s ease; 
@@ -64,28 +65,34 @@
   flex-direction: column;
   flex-grow: 1; 
 }
-.card-brand{
+
+.card-brand {
   display: none;
 }
+
 .card-title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
   letter-spacing: -0.03em;
   text-align: center;
+  color: #fff;
 }
-.card-specs{
+
+.card-specs,
+.card-description-text {
   display: none;
 }
-.card-description-text{
-  display: none;
-}
+
 .card-price {
-  color: var(--muted);
+  font-family: 'Space Grotesk', sans-serif;
+  color: #77FF5C;
+  font-weight: 700;
   line-height: 1.4;
-  margin-bottom: 22px;
+  margin-bottom: 15px;
   flex-grow: 1;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 
@@ -95,29 +102,37 @@
   align-items: center;
   gap: 15px;
   margin: auto;
+  width: 100%;
 }
-.card-footer .card-price{
+
+.card-footer .card-price {
   display: none;
 }
+
 .card-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 14px;
+  padding: 12px 14px;
   border-radius: 12px;
   background: transparent;
-  border: 1px solid rgba(119, 255, 92, 0.25);
+  border: 1px solid rgba(119, 255, 92, 0.3);
   color: white;
   text-decoration: none;
-  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
   font-size: 0.85rem;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  text-transform: uppercase;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .card-button:hover {
   background: rgba(119, 255, 92, 0.3);
-  box-shadow: 0 0 30px 5px rgba(119, 255, 92, 0.3);
-  transition: all 0.2s ease-out;
+  box-shadow: 0 0 20px rgba(119, 255, 92, 0.3);
+  border-color: #77FF5C;
 }
 
 .card-button:hover::before {
@@ -145,11 +160,10 @@
 }
 
 .card-button:active {
-  box-shadow: 0 0 0 0 transparent;
-  transition: box-shadow 0.2s ease-in;
+  transform: scale(0.98);
 }
 
-
+/* Delays escalonados para la aparición de tarjetas */
 .card:nth-child(1) { animation-delay: 0.05s; }
 .card:nth-child(2) { animation-delay: 0.1s; }
 .card:nth-child(3) { animation-delay: 0.15s; }
@@ -157,16 +171,43 @@
 .card:nth-child(5) { animation-delay: 0.25s; }
 
 
+/* ==========================================================================
+   ======================= MEDIA QUERY (MOBILE - 557.8px) ===================
+   ========================================================================== */
 @media (max-width: 557.8px) {
-  .grid{  grid-template-columns: repeat(auto-fit, minmax(150px, 0fr));padding-top: 75px;}
-  .cart-header{padding: 2px 12.5%;}
-  .cart-header h2 {font-size: 0.6rem;}
-  .cart-body{padding:  0px 12.5%;}
-  .cart-item {padding: 10px 0px;}
-  .cart-item-img { width: 50px; height: 50px;object-fit: cover;}
-  .cart-item-title {font-size: 0.8rem;}
-  .cart-item-price{font-size: 0.6rem;}
-  .cart-total{font-size: 0.6rem; margin: 5px;}
-  .checkout-btn{font-size: 0.6rem;padding: 5px 8px;}
-  .cart-footer {padding: 10px 12.5%;}
+  .grid { 
+    /* Corregido el minmax para que no colapse a 0fr en pantallas chicas */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    padding-top: 85px;
+    gap: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card img {
+    height: 160px; /* Imagen más compacta para celulares */
+  }
+
+  .card-content {
+    padding: 12px;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .card-price {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .card-button {
+    padding: 10px 8px;
+    font-size: 0.75rem;
+  }
 }
