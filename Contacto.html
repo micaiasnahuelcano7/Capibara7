@@ -24,8 +24,8 @@
         </header>
         <nav class="menu">
             <a href="./index.html">Inicio</a>
+            <a href="./Sobre Nosotros.html">Sobre Nosotros</a>
             <a href="./tienda.html">Tienda</a>
-            <a href="./Contacto.html">Contacto</a>
             <a>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="hamburger">☰</label>
@@ -34,65 +34,62 @@
 
 
         <div class="scroll-fade-overlay"></div>
-<main class="about-main">
-            <!-- HERO / INTRODUCCIÓN GALÁCTICA -->
-            <section class="about-hero">
-                <div class="about-container">
-                    <div class="about-text">
-                        <span class="about-badge">Bitácora de Vuelo • Estación 04</span>
-                        <h2>Cultivada en el Vacío, Forjada en el Conurbano</h2>
-                        <p>En <strong>Capibara</strong> abandonamos las leyes de la física terrestre. No somos una marca convencional: somos una flota clandestina dedicada a extraer la mejor yerba mate de los rincones más oscuros del cosmos y traerla directo a tu mate.</p>
-                        <p>Cada paquete atraviesa tormentas de asteroides, escanea galaxias lejanas y llega a tus manos con el balance perfecto de polvo cuántico y un estacionamiento galáctico de 24 meses. Menos charla, más abducción.</p>
-                        <a href="./tienda.html" class="about-btn">Abordar la Nave</a>
-                    </div>
-                    <div class="about-image">
-                        <div class="glow-orb"></div>
-                        <img src="./assets/LogoCapibaraSF.png" alt="Capibara Espacial Sobre Nosotros">
-                    </div>
-                </div>
+<main class="contacto-main">
+            <section class="contacto-hero">
+                <span class="about-badge">Frecuencia Interdimensional • Canal 07</span>
+                <h1>SEÑALES DE RADIO GALÁCTICA</h1>
+                <p>¿Tenés interferencias con tu mate, querés interceptar un cargamento de yerba o necesitás sintonizar con la tripulación? Transmitinos tu coordenada. Respondemos antes de que colapse el hiperespacio.</p>
             </section>
 
-            <!-- SECCIÓN DE VALORES / LEYENDA ESPACIAL -->
-            <section class="about-lore">
-                <div class="lore-header">
-                    <h3>Los Tres Pilares de la Flota</h3>
-                    <p>Los códigos sagrados que rigen cada expedición interestelar del carpincho espacial.</p>
+            <div class="contacto-container">
+                <div class="contacto-info-card card-mistica">
+                    <h2>Centro de Comando</h2>
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <h3>Base Operativa (Sector Caballito)</h3>
+                            <p>CABA, Coordenadas Terrestres Protegidas</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📱</span>
+                        <div>
+                            <h3>Frecuencia Cuántica (WhatsApp)</h3>
+                            <p>+54 9 11 26251445</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">✉️</span>
+                        <div>
+                            <h3>Transmisión Satelital (Email)</h3>
+                            <p>micaias.cano.1@gmail.com</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="lore-grid">
-                    <div class="card-mistica">
-                        <h3>Gravedad Cero</h3>
-                        <p>Nuestros cultivos flotan en nebulosas lejanas donde la acidez no existe. Un mate liviano para la materia, pesado para la conciencia.</p>
-                    </div>
-                    <div class="card-mistica">
-                        <h3>Contrabando Astral</h3>
-                        <p>Burlamos los controles de la aduana intergaláctica para traerte un producto de élite absoluta a precios que harían desmayar a un androide.</p>
-                    </div>
-                    <div class="card-mistica">
-                        <h3>Hermandad de la Mateada</h3>
-                        <p>No vendemos solo un producto, abrimos un portal. Cuando te sumás a la tripulación, el termo siempre está listo para arrancar el viaje.</p>
-                    </div>
-                </div>
-            </section>
 
-            <!-- SECCIÓN INTERACTIVA DE HISTORIA -->
-            <section class="about-timeline">
-                <div class="timeline-box">
-                    <h3>Cronología del Fenómeno</h3>
-                    <div class="timeline-item">
-                        <span class="year">Año 2024 (Era Pre-Abducción)</span>
-                        <p>Un grupo de terrícolas cansados de tomar yerba lavada decide construir un laboratorio clandestino en Caballito.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="year">Año 2025 (El Gran Salto)</span>
-                        <p>Se logra el primer envío de prueba a través de un agujero de gusano. Nace oficialmente la infusión estelar "Capibara".</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="year">Año 2026 (Expansión Total)</span>
-                        <p>La flota se consolida en todo el territorio nacional. Los precios siguen rompiendo la matrix y la tripulación no para de crecer.</p>
-                    </div>
+                <div class="contacto-form-card card-mistica">
+                    <h2>Terminal de Enlace</h2>
+                    <!-- Tip: Acá podés poner la URL de tu Webhook para automatizar el ingreso de datos -->
+                    <form class="main-form" action="" method="POST">
+                        <div class="form-group">
+                            <label for="nombre">Alias del Tripulante</label>
+                            <input type="text" id="nombre" placeholder="¿Cómo te detecta el radar?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Canal de Retorno (Email)</label>
+                            <input type="email" id="email" placeholder="tripulante@galaxia.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Transmisión / Coordenada</label>
+                            <textarea id="mensaje" rows="5" placeholder="Escribí tu mensaje hacia el espacio exterior..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-enviar">Lanzar Transmisión</button>
+                    </form>
                 </div>
-            </section>
-        </main>        <footer>
+            </div>
+        </main>
+
+        <footer>
             <div class="redes">
                 <a href="#"><img src="./assets/yt.png" alt="yt"></a>
                 <a href="#"><img src="./assets/wtsap.png" alt="wtsp"></a>
@@ -102,9 +99,8 @@
             <div class="secciones">
                 <h3>Secciones</h3>
                 <a href="./index.html">Inicio</a>
+                <a href="./Sobre Nosotros.html">Sobre Nosotros</a>
                 <a href="./tienda.html">Tienda</a>
-                <a href="./Locales.html">Locales</a>
-                <a href="./Contacto.html">Contacto</a>
             </div>
             <div class="contacto">
                 <h3>Contacto</h3>
@@ -121,29 +117,31 @@
                     <button type="submit">Enviar</button>
                 </form>
             </div>
-        </footer>
-        <article id="wrap">
-            <article id="lightings">
-                <section id="one">
-                    <section id="two">
-                        <section id="three">
-                            <section id="four">
-                                <section id="five">
-                                <!-- El centro del resplandor -->
-                                </section>
+
+        </section>
+        <div class="mediosDePago" style="display: none;" ></div>
+        <div class="copyright"><a href="#">Copyright Capibara Argentina - 2026. Todos los derechos reservados.</a></div>
+    </footer>
+    <article id="wrap">
+        <article id="lightings">
+            <section id="one">
+                <section id="two">
+                    <section id="three">
+                        <section id="four">
+                            <section id="five">
+                            <!-- El centro del resplandor -->
                             </section>
                         </section>
                     </section>
                 </section>
-            </article>
+            </section>
         </article>
-        <script src="script.js"></script>
-
-<style>
-/* ==========================================================================
-   ======================= ESTILOS "SOBRE NOSOTROS" =========================
-   ========================================================================== */
-@font-face {
+    </article>
+    <script src="script.js"></script>
+    <style>/* =========================================
+   ESTILOS PARA EL MAIN DE CONTACTO
+   ========================================= */
+   @font-face {
   font-family: 'Syne';
   src: url('./assets/Syne-Bold.ttf') format('truetype');
   font-weight: 700;
@@ -174,7 +172,7 @@
   font-style: normal;
   font-display: swap;
 }
-.about-main {
+.contacto-main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 120px 20px 80px 20px;
@@ -182,238 +180,267 @@
     z-index: 5;
 }
 
-.about-hero {
-    margin-bottom: 80px;
+.contacto-hero {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeUp 1s ease;
 }
 
-.about-container {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.about-badge {
-    display: inline-block;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #77FF5C;
-    background: rgba(119, 255, 92, 0.1);
-    border: 1px solid rgba(119, 255, 92, 0.3);
-    padding: 6px 16px;
-    border-radius: 50px;
-    margin-bottom: 20px;
-}
-
-.about-text h2 {
+.contacto-hero h1 {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(119, 255, 92, 0.8) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 800;
-    line-height: 1.1;
+    filter: drop-shadow(0px 0px 15px rgba(119, 255, 92, 0.3));
     margin-bottom: 20px;
+    font-weight: 800;
 }
 
-.about-text p {
+.contacto-hero p {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.1rem;
     color: var(--muted, #b8bcc8);
+    max-width: 650px;
+    margin: 0 auto;
     line-height: 1.6;
-    margin-bottom: 20px;
 }
 
-.about-btn {
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Reutilizamos y adaptamos la clase mistica para los contenedores */
+.contacto-info-card, 
+.contacto-form-card {
+    background: rgba(20, 25, 20, 0.6);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(119, 255, 92, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contacto-info-card:hover, 
+.contacto-form-card:hover {
+    border-color: rgba(119, 255, 92, 0.5);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), 0 0 20px rgba(119, 255, 92, 0.1);
+}
+
+.contacto-info-card h2, 
+.contacto-form-card h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(119, 255, 92, 0.3);
+    padding-bottom: 15px;
     display: inline-block;
-    margin-top: 10px;
-    padding: 16px 35px;
+}
+
+/* --- Información de Contacto --- */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease;
+}
+
+.info-item:hover {
+    transform: translateX(10px);
+}
+
+.info-item .icon {
+    font-size: 1.8rem;
+    filter: drop-shadow(0 0 8px rgba(119, 255, 92, 0.6));
+    animation: floatIcon 3s ease-in-out infinite alternate;
+}
+
+.info-item h3 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.1rem;
-    font-weight: 700;
+    color: #77FF5C;
+    margin: 0 0 6px 0;
     text-transform: uppercase;
-    color: #000;
-    background: #77FF5C;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 0 30px rgba(119, 255, 92, 0.4), inset 0 0 10px rgba(255,255,255,0.5);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.about-btn:hover {
-    transform: scale(1.05) translateY(-4px);
-    box-shadow: 0 15px 40px rgba(119, 255, 92, 0.6), inset 0 0 15px rgba(255,255,255,0.8);
     letter-spacing: 1px;
 }
 
-/* Imagen con órbita brillante de fondo */
-.about-image {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.glow-orb {
-    position: absolute;
-    width: 280px;
-    height: 280px;
-    background: radial-gradient(circle, rgba(119, 255, 92, 0.3) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: 1;
-    animation: pulseOrb 4s ease-in-out infinite alternate;
-}
-
-.about-image img {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 380px;
-    height: auto;
-    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.8));
-    animation: floatImage 4s ease-in-out infinite alternate;
-}
-
-/* --- Sección de Lore / Pilares --- */
-.about-lore {
-    margin-bottom: 80px;
-}
-
-.lore-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.lore-header h3 {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.lore-header p {
+.info-item p {
     font-family: 'Space Grotesk', sans-serif;
-    color: var(--muted, #b8bcc8);
-    font-size: 1.1rem;
-}
-
-.lore-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-/* --- Sección de Cronología --- */
-.about-timeline {
-    margin-bottom: 40px;
-}
-
-.timeline-box {
-    background: rgba(20, 25, 20, 0.6);
-    border: 1px solid rgba(119, 255, 92, 0.2);
-    border-radius: 30px;
-    padding: 50px 40px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-}
-
-.timeline-box h3 {
-    font-family: 'Syne', sans-serif;
-    font-size: 2.2rem;
-    color: #fff;
-    margin-bottom: 35px;
-    text-align: center;
-}
-
-.timeline-item {
-    position: relative;
-    padding-left: 30px;
-    border-left: 2px solid rgba(119, 255, 92, 0.4);
-    margin-bottom: 30px;
-}
-
-.timeline-item:last-child {
-    margin-bottom: 0;
-}
-
-.timeline-item .year {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #77FF5C;
-    display: block;
-    margin-bottom: 8px;
-}
-
-.timeline-item p {
-    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
     color: #e0e0e0;
-    font-size: 1.05rem;
-    line-height: 1.5;
     margin: 0;
 }
 
-/* Animaciones específicas */
-@keyframes floatImage {
-    from { transform: translateY(0); }
-    to { transform: translateY(-12px); }
+/* --- Formulario --- */
+.main-form .form-group {
+    margin-bottom: 25px;
 }
 
-@keyframes pulseOrb {
-    from { transform: scale(0.9); opacity: 0.5; }
-    to { transform: scale(1.15); opacity: 0.9; }
+.main-form label {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.main-form input, 
+.main-form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.main-form input::placeholder, 
+.main-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.main-form input:focus, 
+.main-form textarea:focus {
+    border-color: rgba(119, 255, 92, 0.6);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 15px rgba(119, 255, 92, 0.2);
+    transform: translateY(-2px);
+}
+
+/* --- Botón (El mismo estilo pulido) --- */
+.btn-enviar {
+    display: inline-block;
+    position: relative;
+    border: 1px solid rgba(119, 255, 92, 0.5);
+    text-transform: uppercase;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 2px;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    transition: all 0.3s ease-in-out;
+    padding: 16px 30px;
+    background-color: transparent;
+    font-weight: 700;
+    border-radius: 12px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background: rgba(119, 255, 92, 0.2);
+    box-shadow: 0 0 30px 5px rgba(119, 255, 92, 0.3);
+    border-color: #77FF5C;
+    transform: translateY(-3px);
+}
+
+.btn-enviar:hover::before {
+    animation: sh02 0.5s 0s linear;
+}
+
+.btn-enviar::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    transform: skewX(-20deg);
+}
+
+@keyframes floatIcon {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
 }
 
 /* ==========================================================================
    ======================= MEDIA QUERY (MOBILE - 557.8px) ===================
    ========================================================================== */
 @media (max-width: 557.8px) {
-    .about-main {
+    .contacto-main {
         padding: 100px 15px 40px 15px;
     }
 
-    .about-container {
+    .contacto-hero {
+        margin-bottom: 40px;
+    }
+
+    .contacto-hero h1 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+        line-height: 1.1;
+    }
+
+    .contacto-hero p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .contacto-container {
         grid-template-columns: 1fr;
         gap: 30px;
-        text-align: center;
     }
 
-    .about-text h2 {
-        font-size: clamp(2rem, 8vw, 2.5rem);
-    }
-
-    .about-badge {
-        margin: 0 auto 15px auto;
-    }
-
-    .about-btn {
-        width: 100%;
-        text-align: center;
-        padding: 15px 20px;
-    }
-
-    .glow-orb {
-        width: 200px;
-        height: 200px;
-    }
-
-    .about-image img {
-        max-width: 260px;
-    }
-
-    .timeline-box {
-        padding: 30px 20px;
+    .contacto-info-card, 
+    .contacto-form-card {
+        padding: 25px 20px;
         border-radius: 20px;
     }
 
-    .timeline-box h3 {
-        font-size: 1.6rem;
+    .contacto-info-card h2, 
+    .contacto-form-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .info-item {
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .info-item .icon {
+        font-size: 1.5rem;
+    }
+
+    .info-item h3 {
+        font-size: 1rem;
+    }
+
+    .info-item p {
+        font-size: 0.9rem;
+    }
+
+    .main-form input, 
+    .main-form textarea {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+
+    .btn-enviar {
+        padding: 14px 20px;
+        font-size: 0.9rem;
     }
 }
-</style>    </div>
-</body>
-</html>
+</style>
