@@ -25,7 +25,6 @@
         <nav class="menu">
             <a href="./index.html">Inicio</a>
             <a href="./tienda.html">Tienda</a>
-            <a href="./Locales.html">Locales</a>
             <a href="./Contacto.html">Contacto</a>
             <a>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -35,22 +34,65 @@
 
 
         <div class="scroll-fade-overlay"></div>
-        <main>
+<main class="about-main">
+            <!-- HERO / INTRODUCCIÓN GALÁCTICA -->
             <section class="about-hero">
                 <div class="about-container">
                     <div class="about-text">
-                        <h2>Naturaleza, Estilo y Pasión</h2>
-                        <p>En <strong>Capibara</strong> nos inspira la tranquilidad y la autenticidad de nuestra fauna local. Fusionamos el diseño moderno con la comodidad urbana, creando productos únicos que acompañan tu día a día con personalidad y estilo propio.</p>
-                        <p>Cada pieza y cada detalle reflejan nuestro compromiso con la calidad, la cercanía y esa actitud relajada que nos define. Descubrí nuestra historia y sé parte de la comunidad.</p>
-                        <a href="./tienda.html" class="about-btn">Explorar Tienda</a>
+                        <span class="about-badge">Bitácora de Vuelo • Estación 04</span>
+                        <h2>Cultivada en el Vacío, Forjada en el Conurbano</h2>
+                        <p>En <strong>Capibara</strong> abandonamos las leyes de la física terrestre. No somos una marca convencional: somos una flota clandestina dedicada a extraer la mejor yerba mate de los rincones más oscuros del cosmos y traerla directo a tu mate.</p>
+                        <p>Cada paquete atraviesa tormentas de asteroides, escanea galaxias lejanas y llega a tus manos con el balance perfecto de polvo cuántico y un estacionamiento galáctico de 24 meses. Menos charla, más abducción.</p>
+                        <a href="./tienda.html" class="about-btn">Abordar la Nave</a>
                     </div>
                     <div class="about-image">
-                        <img src="./assets/LogoCapibaraSF.png" alt="Capibara Sobre Nosotros">
+                        <div class="glow-orb"></div>
+                        <img src="./assets/LogoCapibaraSF.png" alt="Capibara Espacial Sobre Nosotros">
                     </div>
                 </div>
             </section>
-        </main>
-        <footer>
+
+            <!-- SECCIÓN DE VALORES / LEYENDA ESPACIAL -->
+            <section class="about-lore">
+                <div class="lore-header">
+                    <h3>Los Tres Pilares de la Flota</h3>
+                    <p>Los códigos sagrados que rigen cada expedición interestelar del carpincho espacial.</p>
+                </div>
+                <div class="lore-grid">
+                    <div class="card-mistica">
+                        <h3>Gravedad Cero</h3>
+                        <p>Nuestros cultivos flotan en nebulosas lejanas donde la acidez no existe. Un mate liviano para la materia, pesado para la conciencia.</p>
+                    </div>
+                    <div class="card-mistica">
+                        <h3>Contrabando Astral</h3>
+                        <p>Burlamos los controles de la aduana intergaláctica para traerte un producto de élite absoluta a precios que harían desmayar a un androide.</p>
+                    </div>
+                    <div class="card-mistica">
+                        <h3>Hermandad de la Mateada</h3>
+                        <p>No vendemos solo un producto, abrimos un portal. Cuando te sumás a la tripulación, el termo siempre está listo para arrancar el viaje.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN INTERACTIVA DE HISTORIA -->
+            <section class="about-timeline">
+                <div class="timeline-box">
+                    <h3>Cronología del Fenómeno</h3>
+                    <div class="timeline-item">
+                        <span class="year">Año 2024 (Era Pre-Abducción)</span>
+                        <p>Un grupo de terrícolas cansados de tomar yerba lavada decide construir un laboratorio clandestino en Caballito.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">Año 2025 (El Gran Salto)</span>
+                        <p>Se logra el primer envío de prueba a través de un agujero de gusano. Nace oficialmente la infusión estelar "Capibara".</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">Año 2026 (Expansión Total)</span>
+                        <p>La flota se consolida en todo el territorio nacional. Los precios siguen rompiendo la matrix y la tripulación no para de crecer.</p>
+                    </div>
+                </div>
+            </section>
+        </main>        <footer>
             <div class="redes">
                 <a href="#"><img src="./assets/yt.png" alt="yt"></a>
                 <a href="#"><img src="./assets/wtsap.png" alt="wtsp"></a>
@@ -97,137 +139,281 @@
         </article>
         <script src="script.js"></script>
 
-        <style>/* --- Seccion Sobre Nosotros (Main) --- */
+<style>
+/* ==========================================================================
+   ======================= ESTILOS "SOBRE NOSOTROS" =========================
+   ========================================================================== */
+@font-face {
+  font-family: 'Syne';
+  src: url('./assets/Syne-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Syne';
+  src: url('./assets/Syne-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./assets/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./assets/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.about-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 80px 20px;
+    position: relative;
+    z-index: 5;
+}
+
 .about-hero {
-    width: 100%;
-    padding: 120px 20px;
-    padding-bottom: 50px;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 80px;
 }
 
 .about-container {
-    max-width: 1100px;
-    width: 100%;
-    color: rgba(119, 255, 92, 0.5);
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
     align-items: center;
 }
 
-.about-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.about-badge {
+    display: inline-block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
     font-weight: 700;
-    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #77FF5C;
+    background: rgba(119, 255, 92, 0.1);
+    border: 1px solid rgba(119, 255, 92, 0.3);
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.about-text h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(119, 255, 92, 0.8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
 }
 
 .about-text p {
-    font-size: 1.4rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    color: var(--muted, #b8bcc8);
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.about-text strong {
-    color: rgba(119, 255, 92, 0.5);
-}
-
 .about-btn {
     display: inline-block;
-    position: relative;
-    border: 1px solid rgba(119, 255, 92, 0.25);
+    margin-top: 10px;
+    padding: 16px 35px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #fff;
-    overflow: hidden;
-    box-shadow: 0 0 0 0 transparent;
-    transition: all 0.2s ease-in;
-    padding: 12px 28px;
-    background-color: transparent;
+    color: #000;
+    background: #77FF5C;
+    border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
-    border-radius: 6px;
+    box-shadow: 0 0 30px rgba(119, 255, 92, 0.4), inset 0 0 10px rgba(255,255,255,0.5);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .about-btn:hover {
-  background: rgba(119, 255, 92, 0.3);
-  box-shadow: 0 0 30px 5px rgba(119, 255, 92, 0.3);
-    transform: translateY(-2px);
-}
-.about-btn:hover::before {
-  animation: sh02 0.5s 0s linear;
+    transform: scale(1.05) translateY(-4px);
+    box-shadow: 0 15px 40px rgba(119, 255, 92, 0.6), inset 0 0 15px rgba(255,255,255,0.8);
+    letter-spacing: 1px;
 }
 
-.about-btn::before {
-  content: '';
-  display: block;
-  width: 0px;
-  height: 86%;
-  position: absolute;
-  top: 7%;
-  left: 0%;
-  opacity: 0;
-  background: #fff;
-  box-shadow: 0 0 50px 30px #fff;
-  transform: skewX(-20deg);
-}
-
-@keyframes sh02 {
-  from { opacity: 0; left: 0%; }
-  50% { opacity: 1; }
-  to { opacity: 0; left: 100%; }
-}
-
-.about-btn:active {
-  box-shadow: 0 0 0 0 transparent;
-  transition: box-shadow 0.2s ease-in;
-}
-
+/* Imagen con órbita brillante de fondo */
 .about-image {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+.glow-orb {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(119, 255, 92, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+    animation: pulseOrb 4s ease-in-out infinite alternate;
 }
 
 .about-image img {
-    max-width: 100%;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 380px;
     height: auto;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-    animation: floatImage 4s ease-in-out infinite;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.8));
+    animation: floatImage 4s ease-in-out infinite alternate;
 }
 
+/* --- Sección de Lore / Pilares --- */
+.about-lore {
+    margin-bottom: 80px;
+}
+
+.lore-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.lore-header h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.lore-header p {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--muted, #b8bcc8);
+    font-size: 1.1rem;
+}
+
+.lore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* --- Sección de Cronología --- */
+.about-timeline {
+    margin-bottom: 40px;
+}
+
+.timeline-box {
+    background: rgba(20, 25, 20, 0.6);
+    border: 1px solid rgba(119, 255, 92, 0.2);
+    border-radius: 30px;
+    padding: 50px 40px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-box h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid rgba(119, 255, 92, 0.4);
+    margin-bottom: 30px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item .year {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #77FF5C;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #e0e0e0;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Animaciones específicas */
 @keyframes floatImage {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+    from { transform: translateY(0); }
+    to { transform: translateY(-12px); }
 }
 
-/* --- Responsive para moviles --- */
-@media (max-width: 768px) {
+@keyframes pulseOrb {
+    from { transform: scale(0.9); opacity: 0.5; }
+    to { transform: scale(1.15); opacity: 0.9; }
+}
+
+/* ==========================================================================
+   ======================= MEDIA QUERY (MOBILE - 557.8px) ===================
+   ========================================================================== */
+@media (max-width: 557.8px) {
+    .about-main {
+        padding: 100px 15px 40px 15px;
+    }
+
     .about-container {
         grid-template-columns: 1fr;
+        gap: 30px;
         text-align: center;
     }
 
     .about-text h2 {
-        font-size: 2rem;
+        font-size: clamp(2rem, 8vw, 2.5rem);
     }
 
-    .about-image {
-        margin-top: 20px;
+    .about-badge {
+        margin: 0 auto 15px auto;
     }
-    
+
+    .about-btn {
+        width: 100%;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    .glow-orb {
+        width: 200px;
+        height: 200px;
+    }
+
     .about-image img {
         max-width: 260px;
     }
-}</style>
-    </div>
+
+    .timeline-box {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .timeline-box h3 {
+        font-size: 1.6rem;
+    }
+}
+</style>    </div>
 </body>
 </html>
