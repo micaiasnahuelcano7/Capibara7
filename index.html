@@ -25,7 +25,6 @@
         <nav class="menu">
             <a href="./Sobre Nosotros.html">Sobre Nosotros</a>
             <a href="./tienda.html">Tienda</a>
-            <a href="./Locales.html">Locales</a>
             <a href="./Contacto.html">Contacto</a>
             <a>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -35,146 +34,53 @@
 
 
         <div class="scroll-fade-overlay"></div>
-<main id="inicio">
-    <style>
-        /* =========================================
-           ESTILOS EXCLUSIVOS DEL MAIN (Inicio)
-           ========================================= */
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            min-height: 60vh;
-            gap: 20px;
-            padding: 20px;
-            margin-top: 150px; /* Da espacio para que el header fixed no lo tape */
-            animation: fadeUp 1s ease-out;
-        }
-
-        .hero h1 {
-            font-family: Saylora, sans-serif;
-            font-size: clamp(3rem, 10vw, 7rem);
-            color: #ffffff;
-            text-shadow: 0 0 25px rgba(119, 255, 92, 0.4);
-            letter-spacing: 2px;
-            line-height: 1.1;
-            margin-bottom: 35px
-        }
-
-        .hero p {
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            color: var(--muted);
-            max-width: 600px;
-            line-height: 1.6;
-            font-family: Exomedium, sans-serif;
-        }
-
-        .btn-cta {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 15px 40px;
-            border-radius: 50px;
-            background: rgba(119, 255, 92, 0.1);
-            border: 1px solid rgba(119, 255, 92, 0.5);
-            color: var(--text);
-            text-decoration: none;
-            font-family: Exomedium, sans-serif;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-        }
-
-        .btn-cta:hover {
-            background: rgba(119, 255, 92, 0.3);
-            box-shadow: 0 0 25px rgba(119, 255, 92, 0.4);
-            transform: translateY(-3px);
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            padding: 40px 20px 80px;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card-tranki {
-            background: var(--card);
-            border: 1px solid var(--card-border);
-            border-radius: var(--radius);
-            padding: 40px 30px;
-            text-align: center;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            transition: transform 0.4s ease, border-color 0.4s ease;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .card-tranki:hover {
-            transform: translateY(-8px);
-            border-color: rgba(119, 255, 92, 0.5);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(119, 255, 92, 0.05);
-        }
-
-        .card-tranki h3 {
-            font-family: Exomedium, sans-serif;
-            font-size: 1.5rem;
-            color: white;
-            letter-spacing: 1px;
-        }
-
-        .card-tranki p {
-            color: var(--muted);
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        #emptyState {
-            display: none; /* Por defecto oculto hasta que js lo active */
-            text-align: center;
-            padding: 50px;
-            color: var(--muted);
-            font-family: Exomedium, sans-serif;
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
-
-    <section class="hero">
+<main>
+<!-- HERO SECTION -->
+    <section class="hero-capibara">
         <h1>CAPIBARA</h1>
-        <p>Vibras relajadas, estilo único. Descubrí nuestra nueva colección pensada para destacar sin hacer ruido. Piola pero tranki.</p>
-        <a href="./tienda.html" class="btn-cta">Ver Colección</a>
+        <p>Vibras alienígenas, energía de otra dimensión. La única yerba mate estacionada 24 meses en gravedad cero. Una infusión premium pensada para teletransportar tu mente a otra galaxia sin vaciarte la billetera. Piola, pero de otro planeta.</p>
+        <a href="./tienda.html" class="btn-cta-yerba">Iniciar Abducción (Comprar)</a>
     </section>
 
-    <section class="features">
-        <div class="card-tranki">
-            <h3>Lo Nuevo</h3>
-            <p>La última tendencia ya aterrizó. Diseños frescos para renovar tu día a día con la mejor calidad.</p>
+    <!-- MARQUESINA INFINITA -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <!-- Duplicamos el contenido para el efecto infinito -->
+            <span>PRECIOS QUE ROMPEN LA MATRIX</span>
+            <span>POLVO DE NEBULOSA INCLUIDO</span>
+            <span>UN SABOR QUE DESAFÍA LA GRAVEDAD</span>
+            <span>COSECHA INTERGALÁCTICA</span>
+            <span>PRECIOS QUE ROMPEN LA MATRIX</span>
+            <span>POLVO DE NEBULOSA INCLUIDO</span>
+            <span>UN SABOR QUE DESAFÍA LA GRAVEDAD</span>
+            <span>COSECHA INTERGALÁCTICA</span>
         </div>
-        <div class="card-tranki">
-            <h3>Los Clásicos</h3>
-            <p>Esas piezas que nunca fallan y combinan con todo. El confort de siempre, llevado a otro nivel.</p>
+    </div>
+
+    <!-- CARACTERÍSTICAS FLASHEADAS -->
+    <section class="yerba-features">
+        <div class="card-mistica">
+            <h3>Palo Interestelar</h3>
+            <p>Nuestra yerba es cultivada en cinturones de asteroides y secada con radiación solar directa. Olvidate de la acidez, este mate te formatea el sistema operativo y te reinicia el cerebro desde el primer sorbo.</p>
         </div>
-        <div class="card-tranki">
-            <h3>Comunidad</h3>
-            <p>Unite a la familia Capibara. Seguinos en nuestras redes y enterate de los drops antes que nadie.</p>
+        <div class="card-mistica">
+            <h3>Polvo Cuántico</h3>
+            <p>Logramos la fórmula matemática perfecta. La cantidad exacta de polvo espacial para una espumosidad que sobrevive a la falta de gravedad. Un verde radiactivo que encandila (pero tranquilo, no muta).</p>
+        </div>
+        <div class="card-mistica">
+            <h3>La Tripulación</h3>
+            <p>Más que clientes, somos una flota de exploración. Unite a la nave Capibara, interceptá nuestras frecuencias en las redes y enterate de los drops de otra galaxia antes que los simples terrícolas.</p>
         </div>
     </section>
 
-    <div class="empty-state" id="emptyState">No se ha encontrado ninguna referencia a la palabra puesta en el BUSCADOR.</div>
-</main>
-        <footer>
+    <!-- SECCIÓN DE PRECIOS -->
+    <section class="price-matrix">
+        <h2>CALIDAD ALIENÍGENA, <br><span class="highlight">PRECIOS DEL CONURBANO</span></h2>
+        <p style="max-width: 600px; margin: 0 auto; font-family: 'Space Grotesk'; font-size: 1.2rem; color: #b8bcc8;">
+            Te preguntarás: "¿Cómo hacen para vender tecnología de otra galaxia tan barata?". Si te decimos la verdad, la patrulla espacial nos clausura la nave. Aprovechá antes de que la aduana cuántica se avive. No vas a encontrar estos números ni en el mercado negro de Orión.
+        </p>
+    </section>
+</main>        <footer>
             <div class="redes">
                 <a href="#"><img src="./assets/yt.png" alt="yt"></a>
                 <a href="#"><img src="./assets/wtsap.png" alt="wtsp"></a>
@@ -185,7 +91,6 @@
                 <h3>Secciones</h3>
                 <a href="./Sobre Nosotros.html">Sobre Nosotros</a>
                 <a href="./tienda.html">Tienda</a>
-                <a href="./Locales.html">Locales</a>
                 <a href="./Contacto.html">Contacto</a>
             </div>
             <div class="contacto">
@@ -224,6 +129,327 @@
             </article>
         </article>
         <script src="script.js"></script>
+    <style>
+    /* =========================================================
+       ESTILOS EXCLUSIVOS DEL INDEX (FLASHEADOS Y ELEGANTES)
+       ========================================================= */
+       @font-face {
+  font-family: 'Syne';
+  src: url('./assets/Syne-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Syne';
+  src: url('./assets/Syne-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./assets/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./assets/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+    .hero-capibara {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 85vh;
+        padding: 0 20px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .hero-capibara h1 {
+        /* Usando Syne para el título principal */
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(4rem, 10vw, 8rem);
+        font-weight: 800;
+        margin-bottom: 10px;
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(119, 255, 92, 0.8) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0px 0px 20px rgba(119, 255, 92, 0.4));
+        letter-spacing: -2px;
+        animation: floatTitle 4s ease-in-out infinite;
+    }
+
+    .hero-capibara p {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(1.2rem, 2vw, 1.5rem);
+        max-width: 700px;
+        color: var(--muted, #b8bcc8);
+        margin-bottom: 40px;
+        line-height: 1.6;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    }
+
+    .btn-cta-yerba {
+        padding: 18px 40px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #000;
+        background: #77FF5C;
+        border-radius: 50px;
+        text-decoration: none;
+        box-shadow: 0 0 30px rgba(119, 255, 92, 0.4), inset 0 0 10px rgba(255,255,255,0.5);
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .btn-cta-yerba:hover {
+        transform: scale(1.05) translateY(-5px);
+        box-shadow: 0 15px 40px rgba(119, 255, 92, 0.6), inset 0 0 15px rgba(255,255,255,0.8);
+        letter-spacing: 2px;
+    }
+
+    /* Marquesina Infinita */
+    .marquee-container {
+        width: 100vw;
+        overflow: hidden;
+        background: rgba(119, 255, 92, 0.1);
+        border-top: 1px solid rgba(119, 255, 92, 0.3);
+        border-bottom: 1px solid rgba(119, 255, 92, 0.3);
+        padding: 15px 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        backdrop-filter: blur(5px);
+        margin-bottom: 80px;
+    }
+
+    .marquee-content {
+        display: flex;
+        width: max-content;
+        animation: scrollMarquee 20s linear infinite;
+        font-family: 'Syne', sans-serif;
+        font-size: 1.5rem;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .marquee-content span {
+        margin: 0 40px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .marquee-content span::after {
+        content: "✦";
+        color: #77FF5C;
+    }
+
+    /* Sección de Características */
+    .yerba-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 40px 0;
+        max-width: 1200px;
+        margin: 0 auto 80px auto;
+        position: relative;
+        z-index: 5;
+    }
+
+    .card-mistica {
+        background: rgba(20, 25, 20, 0.6);
+        border: 1px solid rgba(119, 255, 92, 0.2);
+        border-radius: 30px;
+        padding: 40px 30px;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-mistica::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(119, 255, 92, 0.1) 0%, transparent 60%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+    }
+
+    .card-mistica:hover {
+        transform: translateY(-10px);
+        border-color: rgba(119, 255, 92, 0.6);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(119, 255, 92, 0.15);
+    }
+
+    .card-mistica:hover::before {
+        opacity: 1;
+        animation: rotateGlow 10s linear infinite;
+    }
+
+    .card-mistica h3 {
+        font-family: 'Syne', sans-serif;
+        font-size: 2rem;
+        color: #fff;
+        margin-bottom: 15px;
+        border-bottom: 2px solid rgba(119, 255, 92, 0.3);
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+
+    .card-mistica p {
+        font-family: 'Space Grotesk', sans-serif;
+        color: #e0e0e0;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    /* Sección de Precios Rotos */
+    .price-matrix {
+        text-align: center;
+        padding: 80px 20px;
+        background: radial-gradient(circle at center, rgba(119, 255, 92, 0.05) 0%, transparent 70%);
+        border-radius: 50px;
+        margin-bottom: 80px;
+        border: 1px dashed rgba(255,255,255,0.1);
+    }
+
+    .price-matrix h2 {
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .price-matrix .highlight {
+        color: #77FF5C;
+        text-shadow: 0 0 20px rgba(119, 255, 92, 0.5);
+    }
+
+    /* Animaciones */
+    @keyframes floatTitle {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    @keyframes scrollMarquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+    @keyframes rotateGlow {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @media (max-width: 557.8px) {
+    
+    /* 1. HERO SECTION */
+    .hero-capibara {
+        min-height: 70vh; /* Ocupa un poco menos de alto para que se vea que hay más contenido abajo */
+        padding: 40px 15px 0px;
+    }
+
+    .hero-capibara h1 {
+        /* Ajustamos el clamp para que entre bien en pantallas finitas sin desbordar */
+        font-size: clamp(1.5rem, 15vw, 2.3rem);
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+
+    .hero-capibara p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.9); /* Sombra más fuerte para mejor lectura en móvil */
+    }
+
+    .btn-cta-yerba {
+        padding: 15px 25px;
+        font-size: 0.95rem;
+        width: 90%; /* En móvil queda mejor un botón ancho que ocupe casi toda la pantalla */
+        text-align: center;
+    }
+
+    /* 2. MARQUESINA (Buscamos que no se vea gigante) */
+    .marquee-container {
+        margin-bottom: 50px; /* Menos margen en celular */
+        padding: 10px 0;
+    }
+
+    .marquee-content {
+        font-size: 1.1rem;
+    }
+
+    .marquee-content span {
+        margin: 0 20px; /* Menos espacio entre frases para que se lean más rápido */
+        gap: 15px;
+    }
+
+    /* 3. CARACTERÍSTICAS (Las tarjetas místicas) */
+    .yerba-features {
+        /* Forzamos 1 sola columna en vez del grid automático */
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+        margin-bottom: 50px;
+    }
+
+    .card-mistica {
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .card-mistica h3 {
+        font-size: 1.5rem;
+    }
+
+    .card-mistica p {
+        font-size: 0.95rem;
+    }
+
+    /* 4. SECCIÓN DE PRECIOS */
+    .price-matrix {
+        padding: 40px 15px;
+        margin: 0 15px 50px 15px;
+        border-radius: 25px;
+    }
+
+    .price-matrix h2 {
+        font-size: clamp(1.8rem, 8vw, 2.2rem);
+        line-height: 1.1;
+    }
+
+    .price-matrix p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    /* 5. ESTADO VACÍO (Buscador) */
+    #emptyState {
+        font-size: 1.1rem !important;
+        padding: 0 15px;
+        margin-top: 40px;
+    }
+}
+</style>
     </div>
 </body>
 </html>
