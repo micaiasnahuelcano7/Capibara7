@@ -1,5 +1,3 @@
-
-/* --- 5. BUSCADOR (Solo en Tienda y Locales) --- */
 .search-wrapper {
   display: flex;
   width: 100%;
@@ -36,7 +34,6 @@
   transition: all 0.3s ease;
   box-shadow: var(--shadow);
   z-index: 11;
-
 }
 
 .search-input::placeholder {
@@ -60,19 +57,20 @@
   animation: fadeUp 0.4s ease;
 }
 
-#paginationContainer{
+/* --- Paginación --- */
+#paginationContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: auto;
-  width: 100%;
   gap: 16px;
   padding-bottom: 25px;
   border-top: 1px solid var(--border-color);
   width: fit-content;
+  max-width: 100%;
   margin: auto;
 }
-.pCbutton{
+
+.pCbutton {
   width: 100%;
   padding: 10px 24px;
   border-radius: 8px;
@@ -83,6 +81,7 @@
   background-color: var(--primary-color);
   color: #ffffff;
 }
+
 #pCbutton-ActiveAndPrev {
   background: linear-gradient(90deg, rgba(65, 180, 42, 0.3), rgba(15, 29, 15, 0.753));
   color: var(--text-dark);
@@ -92,7 +91,6 @@
   opacity: 0.9;
   border: 1px solid rgba(119, 255, 92, 0.25);
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), var(--shadow);
-;
 }
 
 .pCbutton:active:not(:disabled) {
@@ -104,9 +102,22 @@
   cursor: not-allowed;
 }
 @media (max-width: 557.8px) {
-  .search-wrapper{max-width: 40vw; }
-  .search-input{padding: 3vw;}
-  .pagination-container {width: 100%;flex-wrap: wrap; height: auto;}
-  .pCbutton {padding: clamp(4px,6px, 8px) ;width: 100%;}
-  .search-input {padding-left: 25px;}
-}
+/* Buscador */
+  .search-wrapper {
+    max-width: 85vw; /* Aumentado desde 40vw para que sea funcional */
+  }
+  
+  .search-input {
+    padding: 15px 20px 15px 45px; /* Ajustado para mantener proporción */
+  }
+
+  #paginationContainer { /* Corregido de .pagination-container a #paginationContainer */
+    width: 100%;
+    flex-wrap: wrap; 
+    height: auto;
+  }
+  
+  .pCbutton {
+    padding: clamp(6px, 8px, 12px); /* Ligeramente más grande para clics (dedos) */
+    width: 100%;
+  }}
