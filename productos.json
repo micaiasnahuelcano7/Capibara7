@@ -1,0 +1,233 @@
+[
+    { 
+        "id": 1, 
+        "nombre": "Yerba Baldo 1 kg", 
+        "marca": "Baldo", 
+        "modelo": "Común", 
+        "capacidad": "1 kg", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Clásica yerba de estilo uruguayo elaborada en Brasil. Posee un estacionamiento óptimo que equilibra su intensidad con una suavidad notable en el paladar.", 
+        "precio": "10800", 
+        "img": "./assets/baldo-1kg.png" 
+    },
+    { 
+        "id": 2, 
+        "nombre": "Yerba Baldo 500 g", 
+        "marca": "Baldo", 
+        "modelo": "Común", 
+        "capacidad": "500 g", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Clásica yerba de estilo uruguayo elaborada en Brasil. Posee un estacionamiento óptimo que equilibra su intensidad con una suavidad notable en el paladar.", 
+        "precio": "5900", 
+        "img": "./assets/baldo-500g.png" 
+    },
+    { 
+        "id": 3, 
+        "nombre": "Yerba Barão 1 kg", 
+        "marca": "Barão", 
+        "modelo": "Exportación", 
+        "capacidad": "1 kg", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba de molienda fina estilo uruguayo con color verde intenso y sabor fresco y duradero.", 
+        "precio": "9000", 
+        "img": "./assets/barao-exp-1kg.png" 
+    },
+    { 
+        "id": 4, 
+        "nombre": "Yerba Barão 500 g", 
+        "marca": "Barão", 
+        "modelo": "Exportación", 
+        "capacidad": "500 g", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba de molienda fina estilo uruguayo con color verde intenso y sabor fresco y duradero.", 
+        "precio": "5300", 
+        "img": "./assets/barao-exp-500g.png" 
+    },
+    { 
+        "id": 5, 
+        "nombre": "Yerba Canarias 1 kg", 
+        "marca": "Canarias", 
+        "modelo": "Tradicional", 
+        "capacidad": "1 kg", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba mate uruguaya de molienda fina con alto porcentaje de hoja y palo casi imperceptible. Sabor intenso, amargo y duradero.", 
+        "precio": "10900", 
+        "img": "./assets/canarias-1kg.png" 
+    },
+    { 
+        "id": 6, 
+        "nombre": "Yerba Canarias 500 g", 
+        "marca": "Canarias", 
+        "modelo": "Tradicional", 
+        "capacidad": "500 g", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba mate uruguaya de molienda fina con alto porcentaje de hoja y palo casi imperceptible. Sabor intenso, amargo y duradero.", 
+        "precio": "6000", 
+        "img": "./assets/canarias-500g.png" 
+    },
+    { 
+        "id": 7, 
+        "nombre": "Yerba Esmeralda 1 kg", 
+        "marca": "Esmeralda", 
+        "modelo": "Tradicional", 
+        "capacidad": "1 kg", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba de molienda uruguaya caracterizada por su molienda fina y sabor parejo durante toda la cebada.", 
+        "precio": "12500", 
+        "img": "./assets/esmeralda-1kg.png" 
+    },
+    { 
+        "id": 8, 
+        "nombre": "Yerba Pindaré 1 kg", 
+        "marca": "Pindaré", 
+        "modelo": "Tradicional", 
+        "capacidad": "1 kg", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba mate despalada de molienda fina con excelente rinde y cuerpo amigable.", 
+        "precio": "7900", 
+        "img": "./assets/pindare-1kg.png" 
+    },
+    { 
+        "id": 9, 
+        "nombre": "Yerba Pindaré 500 g", 
+        "marca": "Pindaré", 
+        "modelo": "Tradicional", 
+        "capacidad": "500 g", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba mate despalada de molienda fina con excelente rinde y cuerpo amigable.", 
+        "precio": "4800", 
+        "img": "./assets/pindare-500g.png" 
+    },
+    { 
+        "id": 10, 
+        "nombre": "Yerba Rei Verde 1 kg", 
+        "marca": "Rei Verde", 
+        "modelo": "Clásica", 
+        "capacidad": "1 kg", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba equilibrada de molienda fina, mantiene el color verde brillante y un gran rendimiento.", 
+        "precio": "9000", 
+        "img": "./assets/rei-verde-clasica-1kg.png" 
+    },
+    { 
+        "id": 11, 
+        "nombre": "Yerba Rei Verde 500 g", 
+        "marca": "Rei Verde", 
+        "modelo": "Clásica", 
+        "capacidad": "500 g", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba equilibrada de molienda fina, mantiene el color verde brillante y un gran rendimiento.", 
+        "precio": "5900", 
+        "img": "./assets/rei-verde-clasica-500g.png" 
+    },
+    { 
+        "id": 12, 
+        "nombre": "Yerba Rei Verde Premium 1 kg", 
+        "marca": "Rei Verde", 
+        "modelo": "Premium", 
+        "capacidad": "1 kg", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Selección especial de molienda fina con maduración óptima y un sabor persistente y refinado.", 
+        "precio": "11600", 
+        "img": "./assets/rei-verde-premium-1kg.png" 
+    },
+    { 
+        "id": 13, 
+        "nombre": "Yerba Rei Verde Premium 500 g", 
+        "marca": "Rei Verde", 
+        "modelo": "Premium", 
+        "capacidad": "500 g", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Selección especial de molienda fina con maduración óptima y un sabor persistente y refinado.", 
+        "precio": "6300", 
+        "img": "./assets/rei-verde-premium-500g.png" 
+    },
+    { 
+        "id": 14, 
+        "nombre": "Yerba Rei Verde Tradicional 1 kg", 
+        "marca": "Rei Verde", 
+        "modelo": "Tradicional", 
+        "capacidad": "1 kg", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Molienda tipo uruguaya con equilibrio ideal entre amargor y durabilidad en cada cebada.", 
+        "precio": "9500", 
+        "img": "./assets/rei-verde-tradicional-1kg.png" 
+    },
+    { 
+        "id": 15, 
+        "nombre": "Yerba Rei Verde Tradicional 500 g", 
+        "marca": "Rei Verde", 
+        "modelo": "Tradicional", 
+        "capacidad": "500 g", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Molienda tipo uruguaya con equilibrio ideal entre amargor y durabilidad en cada cebada.", 
+        "precio": "5900", 
+        "img": "./assets/rei-verde-tradicional-500g.png" 
+    },
+    { 
+        "id": 16, 
+        "nombre": "Yerba Sara Azul 1 kg", 
+        "marca": "Sara", 
+        "modelo": "Azul (Suave)", 
+        "capacidad": "1 kg", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba de molienda fina y corte uruguayo con una intensidad moderada y amargor suave.", 
+        "precio": "12500", 
+        "img": "./assets/sara-azul-1kg.png" 
+    },
+    { 
+        "id": 17, 
+        "nombre": "Yerba Sara Azul 500 g", 
+        "marca": "Sara", 
+        "modelo": "Azul (Suave)", 
+        "capacidad": "500 g", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba de molienda fina y corte uruguayo con una intensidad moderada y amargor suave.", 
+        "precio": "7600", 
+        "img": "./assets/sara-azul-500g.png" 
+    },
+    { 
+        "id": 18, 
+        "nombre": "Yerba Sara Roja 1 kg", 
+        "marca": "Sara", 
+        "modelo": "Roja (Tradicional)", 
+        "capacidad": "1 kg", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba uruguaya clásica de sabor con cuerpo, amargor pronunciado y espuma duradera.", 
+        "precio": "12500", 
+        "img": "./assets/sara-roja-1kg.png" 
+    },
+    { 
+        "id": 19, 
+        "nombre": "Yerba Sara Roja 500 g", 
+        "marca": "Sara", 
+        "modelo": "Roja (Tradicional)", 
+        "capacidad": "500 g", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba uruguaya clásica de sabor con cuerpo, amargor pronunciado y espuma duradera.", 
+        "precio": "7600", 
+        "img": "./assets/sara-roja-500g.png" 
+    },
+    { 
+        "id": 20, 
+        "nombre": "Yerba Verdecita 1 kg", 
+        "marca": "Verdecita", 
+        "modelo": "Tradicional", 
+        "capacidad": "1 kg", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba mate despalada de molienda fina, suave al paladar y con excelente relación precio-calidad.", 
+        "precio": "7700", 
+        "img": "./assets/verdecita-1kg.png" 
+    },
+    { 
+        "id": 21, 
+        "nombre": "Yerba Verdecita 500 g", 
+        "marca": "Verdecita", 
+        "modelo": "Tradicional", 
+        "capacidad": "500 g", 
+        "otros": "Sin TACC / Tipo UY", 
+        "descripcion": "Yerba mate despalada de molienda fina, suave al paladar y con excelente relación precio-calidad.", 
+        "precio": "4800", 
+        "img": "./assets/verdecita-500g.png" 
+    }
+]

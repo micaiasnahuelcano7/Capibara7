@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#003895">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Capibara"> 
+    <meta name="keywords" content="Capibara"> 
+    <meta name="author" content="Micaias">
+    <meta name="generator" content="Micaias">
+    <meta name="copyright" content="Copyright 2026 - Capibara">
+    <title>capibara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="conteiner">
+        <header class="header">
+            <img src="./assets/LogoCapibaraSF.png" alt="LogoCapibaraSF">
+            <div style="display: flex;width: 100%;max-width: 620px;margin: auto;position: relative;"></div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">☰</label>
+        </header>
+        <nav class="menu">
+            <a href="./Sobre Nosotros.html">Sobre Nosotros</a>
+            <a href="./tienda.html">Tienda</a>
+            <a href="./Locales.html">Locales</a>
+            <a href="./Contacto.html">Contacto</a>
+            <a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">☰</label>
+            </a>
+        </nav>
+
+
+        <div class="scroll-fade-overlay"></div>
+<main id="inicio">
+    <style>
+        /* =========================================
+           ESTILOS EXCLUSIVOS DEL MAIN (Inicio)
+           ========================================= */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 60vh;
+            gap: 20px;
+            padding: 20px;
+            margin-top: 150px; /* Da espacio para que el header fixed no lo tape */
+            animation: fadeUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-family: Saylora, sans-serif;
+            font-size: clamp(3rem, 10vw, 7rem);
+            color: #ffffff;
+            text-shadow: 0 0 25px rgba(119, 255, 92, 0.4);
+            letter-spacing: 2px;
+            line-height: 1.1;
+            margin-bottom: 35px
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--muted);
+            max-width: 600px;
+            line-height: 1.6;
+            font-family: Exomedium, sans-serif;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 15px 40px;
+            border-radius: 50px;
+            background: rgba(119, 255, 92, 0.1);
+            border: 1px solid rgba(119, 255, 92, 0.5);
+            color: var(--text);
+            text-decoration: none;
+            font-family: Exomedium, sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-cta:hover {
+            background: rgba(119, 255, 92, 0.3);
+            box-shadow: 0 0 25px rgba(119, 255, 92, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 40px 20px 80px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card-tranki {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform 0.4s ease, border-color 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .card-tranki:hover {
+            transform: translateY(-8px);
+            border-color: rgba(119, 255, 92, 0.5);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(119, 255, 92, 0.05);
+        }
+
+        .card-tranki h3 {
+            font-family: Exomedium, sans-serif;
+            font-size: 1.5rem;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .card-tranki p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        #emptyState {
+            display: none; /* Por defecto oculto hasta que js lo active */
+            text-align: center;
+            padding: 50px;
+            color: var(--muted);
+            font-family: Exomedium, sans-serif;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+    <section class="hero">
+        <h1>CAPIBARA</h1>
+        <p>Vibras relajadas, estilo único. Descubrí nuestra nueva colección pensada para destacar sin hacer ruido. Piola pero tranki.</p>
+        <a href="./tienda.html" class="btn-cta">Ver Colección</a>
+    </section>
+
+    <section class="features">
+        <div class="card-tranki">
+            <h3>Lo Nuevo</h3>
+            <p>La última tendencia ya aterrizó. Diseños frescos para renovar tu día a día con la mejor calidad.</p>
+        </div>
+        <div class="card-tranki">
+            <h3>Los Clásicos</h3>
+            <p>Esas piezas que nunca fallan y combinan con todo. El confort de siempre, llevado a otro nivel.</p>
+        </div>
+        <div class="card-tranki">
+            <h3>Comunidad</h3>
+            <p>Unite a la familia Capibara. Seguinos en nuestras redes y enterate de los drops antes que nadie.</p>
+        </div>
+    </section>
+
+    <div class="empty-state" id="emptyState">No se ha encontrado ninguna referencia a la palabra puesta en el BUSCADOR.</div>
+</main>
+        <footer>
+            <div class="redes">
+                <a href="#"><img src="./assets/yt.png" alt="yt"></a>
+                <a href="#"><img src="./assets/wtsap.png" alt="wtsp"></a>
+                <a href="#"><img src="./assets/ig.png" alt="ig"></a>
+            </div>
+        <section class="SCN">
+            <div class="secciones">
+                <h3>Secciones</h3>
+                <a href="./Sobre Nosotros.html">Sobre Nosotros</a>
+                <a href="./tienda.html">Tienda</a>
+                <a href="./Locales.html">Locales</a>
+                <a href="./Contacto.html">Contacto</a>
+            </div>
+            <div class="contacto">
+                <h3>Contacto</h3>
+                <a href="#">+54 9 11 26251445</a>
+                <a href="#">micaias.cano.1@gmail.com</a>
+            </div>
+            <div class="newsletter">
+                <h3>Mas Informacion</h3>
+                <form id="newsletter-form" class="form">
+                    <div class="inputbox"> 
+                        <input type="text" placeholder="Email">
+                        <span></span>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            
+        </section>
+        <div class="mediosDePago" style="display: none;" ></div>
+        <div class="copyright"><a href="#">Copyright Capibara Argentina - 2026. Todos los derechos reservados.</a></div>
+    </footer>
+    <article id="wrap">
+        <article id="lightings">
+            <section id="one">
+                <section id="two">
+                        <section id="three">
+                        <section id="four">
+                            <section id="five">
+                            <!-- El centro del resplandor -->
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                </section>
+            </article>
+        </article>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,243 @@
+main {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    width: 85%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.card-image-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    flex: 1.2;
+    min-width: 280px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-brand {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 8px;
+}
+
+.card-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.card-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spec-tag {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.card-description-text {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 20px;
+}
+.card-price{
+    display: none;
+}
+.card-footer{ 
+   width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.card-footer .card-price {
+    display:flex;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #77ff5c;
+}
+.card-button {
+    position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid rgba(119, 255, 92, 0.25);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.8rem;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.card-button:hover {
+  background: rgba(119, 255, 92, 0.3);
+  box-shadow: 0 0 30px 5px rgba(119, 255, 92, 0.3);
+  transition: all 0.2s ease-out;
+}
+
+.card-button:hover::before {
+  animation: sh02 0.5s 0s linear;
+}
+
+.card-button::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from { opacity: 0; left: 0%; }
+  50% { opacity: 1; }
+  to { opacity: 0; left: 100%; }
+}
+
+.card-button:active {
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow 0.2s ease-in;
+}
+
+
+.error-product {
+    text-align: center;
+    padding: 40px;
+    color: #fff;
+}
+
+.error-product h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.error-product p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+@media (max-width: 557.8px) {
+    main {
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+
+    .card {
+        width: 92%;
+        padding: 20px;
+        gap: 20px;
+        border-radius: 16px;
+    }
+
+    .card-image-wrapper {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .card img {
+        max-height: 280px;
+    }
+
+    .card-content {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .card-brand {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    .card-title {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .card-specs {
+        padding: 12px;
+        gap: 6px;
+        align-items: center;
+    }
+
+    .spec-tag {
+        font-size: 0.85rem;
+    }
+
+    .card-description-text {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .card-footer {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .card-footer .card-price {
+        font-size: 1.7rem;
+    }
+
+    .card-button {
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 12px;
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#003895">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Capibara"> 
+    <meta name="keywords" content="Capibara"> 
+    <meta name="author" content="Micaias">
+    <meta name="generator" content="Micaias">
+    <meta name="copyright" content="Copyright 2026 - Capibara">
+    <title>capibara</title>
+    <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./assets/LogoCapibaraSF.png" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./tienda_style.css">
+    <link rel="stylesheet" href="./buscador_style.css">
+    <link rel="stylesheet" href="./carrito.css">
+</head>
+<body> 
+    <div class="conteiner">
+        <header class="header">
+            <img src="./assets/LogoCapibaraSF.png" alt="LogoCapibaraSF">
+            <div class="search-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input
+                type="text"
+                class="search-input"
+                id="searchInput"
+                placeholder="Buscador..."
+                aria-label="Buscar "
+            >
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">☰</label>
+        </header>
+        <nav class="menu">
+            <a href="./index.html">Inicio</a>
+            <a href="./Sobre Nosotros.html">Sobre Nosotros</a>
+            <a href="./Locales.html">Locales</a>
+            <a href="./Contacto.html">Contacto</a>
+            <a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">☰</label>
+            </a>
+        </nav>
+
+
+        <div class="scroll-fade-overlay"></div>
+        <main>
+            <section class="grid" id="recipeGrid"></section>
+            <div class="empty-state" id="emptyState">No se ha encontrado ninguna referencia a la palabra puesta en el BUSCADOR.</div>
+            <div id="paginationContainer" class="pagination"></div>
+        </main>
+        <footer>
+            <div class="redes">
+                <a href="#"><img src="./assets/yt.png" alt="yt"></a>
+                <a href="#"><img src="./assets/wtsap.png" alt="wtsp"></a>
+                <a href="#"><img src="./assets/ig.png" alt="ig"></a>
+            </div>
+        <section class="SCN">
+            <div class="secciones">
+                <h3>Secciones</h3>
+                    <a href="./index.html">Inicio</a>
+                    <a href="./Sobre Nosotros.html">Sobre Nosotros</a>
+                    <a href="./Locales.html">Locales</a>
+                    <a href="./Contacto.html">Contacto</a>
+            </div>
+            <div class="contacto">
+                <h3>Contacto</h3>
+                <a href="#">+54 9 11 26251445</a>
+                <a href="#">micaias.cano.1@gmail.com</a>
+            </div> 
+....................................................................................................................................................................................................................................................................................
+            
+        </section>
+        <div class="mediosDePago" style="display: none;" ></div>
+        <div class="copyright"><a href="#">Copyright Capibara Argentina - 2026. Todos los derechos reservados.</a></div>
+    </footer>
+    <article id="wrap">
+        <article id="lightings">
+            <section id="one">
+                <section id="two">
+                        <section id="three">
+                        <section id="four">
+                            <section id="five">
+                            <!-- El centro del resplandor -->
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                </section>
+            </article>
+        </article>
+
+    <!-- Botón Flotante del Carrito -->
+    <button id="openCartBtn" class="cart-floating-btn" aria-label="Ver Carrito">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <!-- Overlay / Fondo oscuro -->
+    <div id="cartOverlay" class="cart-overlay">
+        <!-- Panel Lateral Desplegable del Carrito -->
+        <aside id="cartDrawer" class="cart-drawer">
+            <div class="cart-header">
+                 <h2>Tus Artículos</h2>
+                <button id="closeCartBtn" class="close-cart-btn" aria-label="Cerrar Carrito">&times;</button>
+            </div>
+            <div class="cart-body" id="cartItemsContainer">
+                <p class="empty-cart-text">Tu carrito está vacío.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalAmount">$0</span>
+                </div>
+                <button class="checkout-btn">Finalizar Compra</button>
+            </div>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* --- 6. GRILLA, TARJETAS, CARRITO (Solo en Tienda) --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 0fr)); 
+  justify-content: center;
+  align-content: start;
+  gap: 22px;
+  width: 100%;
+  padding-top: 120px; 
+  padding-bottom: 75px;
+}
+
+.card {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  backdrop-filter: blur(12px); 
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+  opacity: 1;
+  transform: translateY(40px);
+  animation: cardReveal 0.7s forwards;
+}
+
+.card:hover {
+  transform: translateY(30px);
+  border-color: rgba(83, 236, 56, 0.25);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 40px rgba(124, 92, 255, 0.15);
+}
+
+.card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease; 
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+.card-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent 50%);
+  pointer-events: none;
+}
+
+.card-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+.card-brand{
+  display: none;
+}
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+.card-specs{
+  display: none;
+}
+.card-description-text{
+  display: none;
+}
+.card-price {
+  color: var(--muted);
+  line-height: 1.4;
+  margin-bottom: 22px;
+  flex-grow: 1;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: auto;
+}
+.card-footer .card-price{
+  display: none;
+}
+.card-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid rgba(119, 255, 92, 0.25);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.card-button:hover {
+  background: rgba(119, 255, 92, 0.3);
+  box-shadow: 0 0 30px 5px rgba(119, 255, 92, 0.3);
+  transition: all 0.2s ease-out;
+}
+
+.card-button:hover::before {
+  animation: sh02 0.5s 0s linear;
+}
+
+.card-button::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from { opacity: 0; left: 0%; }
+  50% { opacity: 1; }
+  to { opacity: 0; left: 100%; }
+}
+
+.card-button:active {
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow 0.2s ease-in;
+}
+
+
+.card:nth-child(1) { animation-delay: 0.05s; }
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.15s; }
+.card:nth-child(4) { animation-delay: 0.2s; }
+.card:nth-child(5) { animation-delay: 0.25s; }
+
+
+@media (max-width: 557.8px) {
+  .grid{  grid-template-columns: repeat(auto-fit, minmax(150px, 0fr));padding-top: 75px;}
+  .cart-header{padding: 2px 12.5%;}
+  .cart-header h2 {font-size: 0.6rem;}
+  .cart-body{padding:  0px 12.5%;}
+  .cart-item {padding: 10px 0px;}
+  .cart-item-img { width: 50px; height: 50px;object-fit: cover;}
+  .cart-item-title {font-size: 0.8rem;}
+  .cart-item-price{font-size: 0.6rem;}
+  .cart-total{font-size: 0.6rem; margin: 5px;}
+  .checkout-btn{font-size: 0.6rem;padding: 5px 8px;}
+  .cart-footer {padding: 10px 12.5%;}
+}

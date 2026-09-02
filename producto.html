@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#003895">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Capibara"> 
+    <meta name="keywords" content="Capibara"> 
+    <meta name="author" content="Micaias">
+    <meta name="generator" content="Micaias">
+    <meta name="copyright" content="Copyright 2026 - Capibara">
+    <title>capibara</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./producto.css">
+    <link rel="stylesheet" href="./carrito.css">
+
+</head>
+<body>
+    <div class="conteiner">
+        <header class="header">
+            <img src="./assets/LogoCapibaraSF.png" alt="LogoCapibaraSF">
+            <div style="display: flex;width: 100%;max-width: 620px;margin: auto;position: relative;"></div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">☰</label>
+        </header>
+        <nav class="menu">
+            <a href="./index.html">Inicio</a>
+            <a href="./Sobre Nosotros.html">Sobre Nosotros</a>
+            <a href="./tienda.html">Tienda</a>
+            <a href="./Locales.html">Locales</a>
+            <a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">☰</label>
+            </a>
+        </nav>
+
+
+        <div class="scroll-fade-overlay"></div>
+        <main class="product-detail-container" id="productDetailContainer">
+
+        </main>
+        <footer>
+            <div class="redes">
+                <a href="#"><img src="./assets/yt.png" alt="yt"></a>
+                <a href="#"><img src="./assets/wtsap.png" alt="wtsp"></a>
+                <a href="#"><img src="./assets/ig.png" alt="ig"></a>
+            </div>
+        <section class="SCN">
+            <div class="secciones">
+                <h3>Secciones</h3>
+                <a href="./index.html">Inicio</a>
+                <a href="./Sobre Nosotros.html">Sobre Nosotros</a>
+                <a href="./tienda.html">Tienda</a>
+                <a href="./Locales.html">Locales</a>
+            </div>
+            <div class="contacto">
+                <h3>Contacto</h3>
+                <a href="#">+54 9 11 26251445</a>
+                <a href="#">micaias.cano.1@gmail.com</a>
+            </div>
+            <div class="newsletter">
+                <h3>Mas Informacion</h3>
+                <form id="newsletter-form" class="form">
+                    <div class="inputbox"> 
+                        <input type="text" placeholder="Email">
+                        <span></span>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            
+        </section>
+        <div class="mediosDePago" style="display: none;" ></div>
+        <div class="copyright"><a href="#">Copyright Capibara Argentina - 2026. Todos los derechos reservados.</a></div>
+    </footer>
+    <article id="wrap">
+        <article id="lightings">
+            <section id="one">
+                <section id="two">
+                    <section id="three">
+                        <section id="four">
+                            <section id="five">
+                            <!-- El centro del resplandor -->
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </article>
+    </article>
+        <!-- Botón Flotante del Carrito -->
+    <button id="openCartBtn" class="cart-floating-btn" aria-label="Ver Carrito">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <!-- Overlay / Fondo oscuro -->
+    <div id="cartOverlay" class="cart-overlay">
+        <!-- Panel Lateral Desplegable del Carrito -->
+        <aside id="cartDrawer" class="cart-drawer">
+            <div class="cart-header">
+                 <h2>Tus Artículos</h2>
+                <button id="closeCartBtn" class="close-cart-btn" aria-label="Cerrar Carrito">&times;</button>
+            </div>
+            <div class="cart-body" id="cartItemsContainer">
+                <p class="empty-cart-text">Tu carrito está vacío.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalAmount">$0</span>
+                </div>
+                <button class="checkout-btn">Finalizar Compra</button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+<script>
+// --- LÓGICA DE LA PÁGINA DE DETALLE (producto.html) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const detailContainer = document.getElementById('productDetailContainer');
+    if (!detailContainer) return; // Si no estamos en producto.html, no hace nada
+
+    // 1. Obtenemos el nombre de la URL
+    const params = new URLSearchParams(window.location.search);
+    const productName = params.get('name');
+
+    // 2. Hacemos el Fetch directamente al JSON para asegurar que tenemos los datos
+    fetch('./productos.json')
+        .then(respuesta => {
+            if (!respuesta.ok) throw new Error("Error al cargar el JSON");
+            return respuesta.json();
+        })
+        .then(productos => {
+            // 3. Buscamos el producto por NOMBRE exacto
+            let productoEncontrado = null;
+            
+            if (productName) {
+                // Decodificamos el nombre de la URL y lo pasamos a minúsculas para comparar bien
+                const nombreBuscado = decodeURIComponent(productName).toLowerCase();
+                productoEncontrado = productos.find(p => String(p.nombre).toLowerCase() === nombreBuscado);
+            }
+
+            // 4. Si se encuentra, creamos la tarjeta
+            if (productoEncontrado) {
+                detailContainer.innerHTML = ''; // Limpiamos mensajes previos
+                
+                // Creamos la tarjeta usando la función que ya existe en script.js
+                const tarjetaDetalle = crearTarjetaProducto(productoEncontrado);
+                detailContainer.appendChild(tarjetaDetalle);
+            } else {
+                detailContainer.innerHTML = `
+                    <div class="error-product" style="text-align: center; padding: 3rem;">
+                        <h2>Producto no encontrado</h2>
+                        <p>Lo sentimos, no pudimos encontrar el producto que buscas.</p>
+                        <a href="tienda.html" class="pCbutton" style="display:inline-block; margin-top:15px;">Volver a la tienda</a>
+                    </div>
+                `;
+            }
+        })
+        .catch(error => {
+            console.error("Error cargando el producto:", error);
+            detailContainer.innerHTML = `
+                <div style="text-align: center; padding: 3rem;">
+                    <h2>Error de conexión</h2>
+                    <p>No se pudo cargar la información del producto. Asegúrate de usar Live Server.</p>
+                </div>
+            `;
+        });
+});
+</script>    </div>
+</body>
+</html>
